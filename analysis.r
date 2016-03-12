@@ -27,7 +27,8 @@ top.agency <- head(arrange(pay.agg, desc(total.pays)),10)$Agency
 
 ggplot(school_pay[school_pay$Agency %in% top.agency,], aes(x=Agency,y=Total.Pay...Benefits)) +
     geom_boxplot() +
-    labs(x="Total Pay with Benefits", y="School District", title="Distribution of Wages for Major School Districts in CA") +
+    labs(x="Total Pay with Benefits", y="School District",
+         title="Distribution of Wages for Major School Districts in CA") +
     coord_flip()
 
 # Reduce columns
