@@ -31,6 +31,8 @@ ggplot(school_pay[school_pay$Agency %in% top.agency,], aes(x=Agency,y=Total.Pay.
          title="Distribution of Wages for Major School Districts in CA") +
     coord_flip()
 
+ggsave("outputs/wage-distrib.png")
+
 # Reduce columns
 api.short <- districts[,c("dname","valid","tested","avg_ed","api13")]
 
